@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 import connectDB from "./configs/dbConfig.js";
+import cors from "cors";
 import userRouter from "./routes/userRoutes.js";
 import authRouter from "./routes/authRoutes.js";
 import roomRouter from "./routes/roomRoutes.js";
@@ -13,6 +14,7 @@ const app = express();
 const PORT = process.env.PORT || 8800;
 connectDB();
 
+app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 
