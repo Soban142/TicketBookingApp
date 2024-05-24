@@ -40,7 +40,7 @@ const Featured = () => {
             />
             <div className="featuredTitles">
               <h1>Berlin</h1>
-              <h2>{data[2]} properties</h2>
+              <h2>{data[2] || 0} properties</h2>
             </div>
           </div>
         </>
